@@ -13,7 +13,32 @@ hero_text: Submit original research for oral or poster consideration aligned wit
 - Select the most relevant program session.
 - Include corresponding author email and affiliation.
 
-## Review Timeline
+## Abstract Submission Form
+
+<iframe width="100%" height="600" src="https://forms.office.com/Pages/ResponsePage.aspx?id=YOUR_FORM_ID" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width: 100%;">
+</iframe>
+
+<div class="callout">
+  <strong>Setup Instructions:</strong> This form uses Microsoft Forms. To enable it:
+  <ol>
+    <li>Create a new form in <a href="https://forms.office.com" target="_blank">Microsoft Forms</a></li>
+    <li>Add these fields:
+      <ul>
+        <li>Full Name (Text)</li>
+        <li>Email Address (Email)</li>
+        <li>Affiliation/Institution (Text)</li>
+        <li>Abstract Title (Text)</li>
+        <li>Abstract Content (Long Text, max 250 words)</li>
+        <li>Presentation Preference (Choice: Oral / Poster)</li>
+        <li>Preferred Session (Choice: Diagnostics / Emerging Tech / Pathogen Biology / Insect Biology / Plant Biology / Genetics & Breeding / Integrated Management)</li>
+      </ul>
+    </li>
+    <li>Get the form's embed URL and replace <code>YOUR_FORM_ID</code> above with the actual ID from your form's share/embed settings</li>
+    <li>Configure responses to be emailed to program@ispvp.org</li>
+  </ol>
+</div>
+
+## Submission Deadlines
 
 <ul class="timeline">
   <li><strong>May 1-Aug 1, 2026:</strong> Early bird registration and abstract submission.</li>
@@ -22,13 +47,8 @@ hero_text: Submit original research for oral or poster consideration aligned wit
 </ul>
 
 <p>
-  <a class="button primary" href="mailto:program@ispvp.org?subject=ISPVP%202026%20Abstract%20Submission">Submit Abstract by Email</a>
   <a class="button secondary" href="mailto:program@ispvp.org">Contact Program Chair</a>
 </p>
-
-<div class="callout">
-  Current committee notes indicate email-based submission. A dedicated submission address can replace this button when finalized.
-</div>
 
 ## Host Proposal For Next Congress
 
