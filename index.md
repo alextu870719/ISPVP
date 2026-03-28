@@ -15,11 +15,11 @@ title: ISPVP 2026
     </div>
     <aside class="panel">
       <p><span class="badge">Important Dates</span></p>
-      <ul class="timeline" style="list-style: none; padding: 0;">
-        <li><strong><span class="date">May 1–August 1, 2026</span></strong> Early registration + abstracts</li>
-        <li><strong><span class="date">August 2–23, 2026</span></strong> General registration + abstracts</li>
-        <li><strong><span class="date">August 24–September 25, 2026</span></strong> Late registration + poster-only abstracts</li>
-        <li><strong><span class="date">October 20–23, 2026</span></strong> Symposium dates</li>
+      <ul class="timeline">
+        <li><strong><span class="date">May 1–August 1, 2026</span></strong> — Early registration + abstracts</li>
+        <li><strong><span class="date">August 2–23, 2026</span></strong> — General registration + abstracts</li>
+        <li><strong><span class="date">August 24–September 25, 2026</span></strong> — Late registration + poster-only abstracts</li>
+        <li><strong><span class="date">October 20–23, 2026</span></strong> — Symposium dates</li>
       </ul>
     </aside>
   </div>
