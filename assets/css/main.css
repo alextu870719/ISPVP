@@ -416,10 +416,20 @@ td {
   border-left: 3px solid var(--line);
   padding: 0 0 1rem 0.9rem;
   margin-left: 0.4rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: baseline;
+  border-left: none;
+  padding: 0.65rem 0;
+  margin-left: 0;
 }
 
 .timeline strong {
   color: var(--primary-strong);
+  white-space: nowrap;
+  font-family: "Source Serif 4", Georgia, serif;
+  letter-spacing: 0.02em;
 }
 
 details {
