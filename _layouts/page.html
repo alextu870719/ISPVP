@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% include head.html %}
+  </head>
+  <body>
+    {% include header.html %}
+    <main id="main-content" class="page-main">
+      {% if page.hero_title %}
+      <section class="hero hero-inner">
+        <div class="container">
+          <p class="eyebrow">{{ page.hero_kicker }}</p>
+          <h1>{{ page.hero_title }}</h1>
+          {% if page.hero_text %}<p class="lead">{{ page.hero_text }}</p>{% endif %}
+        </div>
+      </section>
+      {% endif %}
+      <section class="container content-shell">
+        {{ content }}
+      </section>
+    </main>
+    {% include footer.html %}
+  </body>
+</html>

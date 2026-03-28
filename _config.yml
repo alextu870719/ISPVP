@@ -1,0 +1,19 @@
+title: International Symposium for Plant Vascular Pathosystems
+email: info@ispvp.org
+description: >-
+  ISPVP is a global scientific symposium focused on plant vascular pathosystems,
+  integrating pathogen biology, vector ecology, host response, diagnostics, and disease management.
+baseurl: ""
+url: "https://ispvp.org"
+timezone: America/New_York
+markdown: kramdown
+permalink: pretty
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+
+exclude:
+  - "ISCHPP - Citrus Research and Education Center (CREC) - University of Florida, Institute of Food and .html"
