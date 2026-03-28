@@ -417,6 +417,14 @@ summary {
 
   .site-nav {
     position: static;
+    display: grid;
+    background: transparent;
+    border-bottom: none;
+    box-shadow: none;
+    padding: 0;
+    gap: 0 1.5rem;
+    grid-template-columns: auto;
+    grid-auto-flow: column;
   }
 
   body[data-theme="coastal"] .brand-mark {
@@ -444,6 +452,13 @@ summary {
     border-left: 0;
     border-bottom: 2px solid transparent;
     padding: 0.25rem 0;
+  }
+
+  .site-nav a {
+    border-left: none;
+    border-bottom: 2px solid transparent;
+    padding-left: 0;
+    padding-bottom: 0.25rem;
   }
 
   .site-nav a:hover,
