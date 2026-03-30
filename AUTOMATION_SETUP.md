@@ -80,6 +80,19 @@ Files are in `automation/google-apps-script/`.
 5. Set backend env var:
    - `APPS_SCRIPT_WEBHOOK_URL`
 
+### Fast final wiring (already prepared)
+
+After you get your Apps Script Web App URL, run:
+
+- `cd payments-api`
+- `./scripts/set-apps-script-webhook.sh https://script.google.com/macros/s/YOUR_DEPLOYMENT_ID/exec`
+
+This command will:
+
+1. Update `payments-api/.env.test.generated`
+2. Update Vercel production env `APPS_SCRIPT_WEBHOOK_URL`
+3. Redeploy production automatically
+
 ## E. Google Form (Abstract Submission)
 
 1. Create Google Form for abstracts.
