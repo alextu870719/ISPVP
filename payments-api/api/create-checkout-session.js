@@ -21,6 +21,8 @@ const PRICE_MAP = {
   }
 };
 
+const DONATION_PRICE_ID = process.env.STRIPE_PRICE_DONATION || '';
+
 function sendJson(res, status, payload) {
   res.statusCode = status;
   res.setHeader('Content-Type', 'application/json');
@@ -56,20 +58,34 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { name, email, affiliation, ticketType, pricingWindow } = req.body || {};
+    const {
+      name,
+      email,
+      affiliation,
+      ticketType,
+      pricingWindow,
+      checkoutType
+    } = req.body || {};
 
-    if (!name || !email || !affiliation || !ticketType || !pricingWindow) {
+    const isDonation = checkoutType === 'donation';
+
+    if (!name || !email) {
       sendJson(res, 400, { error: 'Missing required fields.' });
       return;
     }
 
-    const priceId = getPriceId(pricingWindow, ticketType);
+    if (!isDonation && (!affiliation || !ticketType || !pricingWindow)) {
+      sendJson(res, 400, { error: 'Missing required fields.' });
+      return;
+    }
+
+    const priceId = isDonation ? DONATION_PRICE_ID : getPriceId(pricingWindow, ticketType);
     if (!priceId) {
       sendJson(res, 400, { error: 'No configured Stripe price for this selection.' });
       return;
     }
 
-    const abstractToken = crypto.randomBytes(16).toString('hex');
+    const abstractToken = isDonation ? '' : crypto.randomBytes(16).toString('hex');
 
     const session = await stripe.checkout.sessions.create({
       mode: 'payment',
@@ -84,11 +100,12 @@ export default async function handler(req, res) {
       success_url: `${process.env.FRONTEND_URL}/payment-success/?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${process.env.FRONTEND_URL}/payment-cancelled/`,
       metadata: {
+        checkoutType: isDonation ? 'donation' : 'registration',
         name,
         email,
-        affiliation,
-        ticketType,
-        pricingWindow,
+        affiliation: affiliation || '',
+        ticketType: ticketType || '',
+        pricingWindow: pricingWindow || '',
         abstractToken
       }
     });

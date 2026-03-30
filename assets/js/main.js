@@ -86,61 +86,26 @@ if (slideshow) {
 }
 
 const registrationForm = document.querySelector('[data-checkout-form]');
+const donationForm = document.querySelector('[data-donation-form]');
 
-if (registrationForm) {
+if (registrationForm || donationForm) {
+  const params = new URLSearchParams(window.location.search);
+  const useLocalApi = params.get('localApi') === '1';
+  const defaultCheckoutApiBase = useLocalApi
+    ? 'http://127.0.0.1:3000'
+    : 'https://ispvp-payments-api.vercel.app';
+
   window.ISPVP_CONFIG = window.ISPVP_CONFIG || {
-    CHECKOUT_API_BASE: 'https://ispvp-payments-api.vercel.app'
+    CHECKOUT_API_BASE: defaultCheckoutApiBase
   };
 
-  const feePreview = document.getElementById('selected-fee');
-  const message = document.getElementById('checkout-message');
-  const submitButton = registrationForm.querySelector('[data-submit-button]');
-  const ticketType = document.getElementById('ticketType');
-  const pricingWindow = document.getElementById('pricingWindow');
-
-  const feeTable = {
-    early: { regular: 450, research: 350, student: 250 },
-    general: { regular: 500, research: 400, student: 300 },
-    late: { regular: 550, research: 450, student: 350 }
-  };
-
-  function updateFeePreview() {
-    const ticket = ticketType?.value || 'regular';
-    const windowKey = pricingWindow?.value || 'early';
-    const amount = feeTable[windowKey]?.[ticket] || feeTable.early.regular;
-    if (feePreview) {
-      feePreview.textContent = `USD ${amount}`;
-    }
-  }
-
-  ticketType?.addEventListener('change', updateFeePreview);
-  pricingWindow?.addEventListener('change', updateFeePreview);
-  updateFeePreview();
-
-  registrationForm.addEventListener('submit', async (event) => {
-    event.preventDefault();
-
-    const payload = {
-      name: document.getElementById('fullName')?.value?.trim() || '',
-      email: document.getElementById('email')?.value?.trim() || '',
-      affiliation: document.getElementById('affiliation')?.value?.trim() || '',
-      ticketType: ticketType?.value || 'regular',
-      pricingWindow: pricingWindow?.value || 'early'
-    };
-
-    if (!payload.name || !payload.email || !payload.affiliation) {
-      if (message) {
-        message.textContent = 'Please complete all required fields.';
-      }
-      return;
+  async function submitCheckout(payload, messageEl, submitEl, pendingMessage) {
+    if (submitEl) {
+      submitEl.disabled = true;
     }
 
-    if (submitButton) {
-      submitButton.disabled = true;
-    }
-
-    if (message) {
-      message.textContent = 'Preparing secure checkout...';
+    if (messageEl) {
+      messageEl.textContent = pendingMessage || 'Preparing secure checkout...';
     }
 
     try {
@@ -159,12 +124,86 @@ if (registrationForm) {
 
       window.location.href = data.url;
     } catch (error) {
-      if (message) {
-        message.textContent = error.message || 'Checkout failed. Please try again.';
+      if (messageEl) {
+        messageEl.textContent = error.message || 'Checkout failed. Please try again.';
       }
-      if (submitButton) {
-        submitButton.disabled = false;
+      if (submitEl) {
+        submitEl.disabled = false;
       }
     }
-  });
+  }
+
+  if (registrationForm) {
+    const feePreview = document.getElementById('selected-fee');
+    const message = document.getElementById('checkout-message');
+    const submitButton = registrationForm.querySelector('[data-submit-button]');
+    const ticketType = document.getElementById('ticketType');
+    const pricingWindow = document.getElementById('pricingWindow');
+
+    const feeTable = {
+      early: { regular: 450, research: 350, student: 250 },
+      general: { regular: 500, research: 400, student: 300 },
+      late: { regular: 550, research: 450, student: 350 }
+    };
+
+    function updateFeePreview() {
+      const ticket = ticketType?.value || 'regular';
+      const windowKey = pricingWindow?.value || 'early';
+      const amount = feeTable[windowKey]?.[ticket] || feeTable.early.regular;
+      if (feePreview) {
+        feePreview.textContent = `USD ${amount}`;
+      }
+    }
+
+    ticketType?.addEventListener('change', updateFeePreview);
+    pricingWindow?.addEventListener('change', updateFeePreview);
+    updateFeePreview();
+
+    registrationForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      const payload = {
+        checkoutType: 'registration',
+        name: document.getElementById('fullName')?.value?.trim() || '',
+        email: document.getElementById('email')?.value?.trim() || '',
+        affiliation: document.getElementById('affiliation')?.value?.trim() || '',
+        ticketType: ticketType?.value || 'regular',
+        pricingWindow: pricingWindow?.value || 'early'
+      };
+
+      if (!payload.name || !payload.email || !payload.affiliation) {
+        if (message) {
+          message.textContent = 'Please complete all required fields.';
+        }
+        return;
+      }
+
+      await submitCheckout(payload, message, submitButton, 'Preparing secure checkout...');
+    });
+  }
+
+  if (donationForm) {
+    const donationMessage = document.getElementById('donation-message');
+    const donationSubmit = donationForm.querySelector('[data-donation-submit]');
+
+    donationForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      const payload = {
+        checkoutType: 'donation',
+        name: document.getElementById('donorName')?.value?.trim() || '',
+        email: document.getElementById('donorEmail')?.value?.trim() || '',
+        affiliation: document.getElementById('donorAffiliation')?.value?.trim() || 'ISPVP Supporter'
+      };
+
+      if (!payload.name || !payload.email) {
+        if (donationMessage) {
+          donationMessage.textContent = 'Please enter name and email.';
+        }
+        return;
+      }
+
+      await submitCheckout(payload, donationMessage, donationSubmit, 'Preparing donation checkout...');
+    });
+  }
 }

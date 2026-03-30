@@ -67,6 +67,11 @@ export default async function handler(req, res) {
       const session = event.data.object;
 
       if (session.payment_status === 'paid') {
+        if (session.metadata?.checkoutType === 'donation') {
+          sendText(res, 200, 'ok');
+          return;
+        }
+
         await postToAppsScript({
           secret: process.env.APPS_SCRIPT_SHARED_SECRET,
           eventType: event.type,
