@@ -409,6 +409,94 @@ a:focus-visible {
   color: var(--ink-soft);
 }
 
+.venue-showcase {
+  margin-top: 1.8rem;
+}
+
+.venue-showcase-head h2 {
+  margin-top: 0.2rem;
+}
+
+.slideshow {
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--surface);
+  box-shadow: 0 2px 8px rgba(26, 43, 36, 0.05);
+}
+
+.slides {
+  position: relative;
+  min-height: 250px;
+}
+
+.slide {
+  display: none;
+  margin: 0;
+}
+
+.slide.is-active {
+  display: block;
+}
+
+.slide img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.slide figcaption {
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  color: var(--primary-strong);
+  background: color-mix(in srgb, var(--paper) 92%, white 8%);
+}
+
+.slide-control {
+  position: absolute;
+  top: 44%;
+  transform: translateY(-50%);
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--surface) 88%, white 12%);
+  color: var(--primary-strong);
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 0.35rem 0.7rem;
+  cursor: pointer;
+}
+
+.slide-control.prev {
+  left: 0.8rem;
+}
+
+.slide-control.next {
+  right: 0.8rem;
+}
+
+.slide-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.6rem 0 0.8rem;
+}
+
+.slide-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--paper) 75%, white 25%);
+  cursor: pointer;
+  padding: 0;
+}
+
+.slide-dot.is-active {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
 .callout {
   border-left: 4px solid var(--accent);
   padding: 0.75rem 1rem;
@@ -653,6 +741,10 @@ summary {
 
   .photo-card img {
     height: 210px;
+  }
+
+  .slide img {
+    height: 420px;
   }
 
   .footer-grid {

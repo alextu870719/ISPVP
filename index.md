@@ -25,6 +25,52 @@ title: ISPVP 2026
   </div>
 </section>
 
+<section class="container venue-showcase" aria-label="Venue and destination photo slideshow">
+  <div class="venue-showcase-head">
+    <p class="eyebrow">Venue Preview</p>
+    <h2>Holiday Inn Resort And South Padre Island</h2>
+  </div>
+
+  <div class="slideshow" data-slideshow>
+    <div class="slides" data-slides>
+      <figure class="slide is-active" data-slide>
+        <img src="{{ '/assets/images/home-slideshow/holiday-inn.jpg' | relative_url }}" alt="Holiday Inn Resort South Padre Island exterior view">
+        <figcaption>Holiday Inn Resort South Padre Island</figcaption>
+      </figure>
+      <figure class="slide" data-slide>
+        <img src="{{ '/assets/images/home-slideshow/beach.jpg' | relative_url }}" alt="South Padre Island beach view">
+        <figcaption>South Padre Island Beach</figcaption>
+      </figure>
+      <figure class="slide" data-slide>
+        <img src="{{ '/assets/images/home-slideshow/sunset.jpg' | relative_url }}" alt="Sunset over South Padre Island shoreline">
+        <figcaption>South Padre Sunset</figcaption>
+      </figure>
+      <figure class="slide" data-slide>
+        <img src="{{ '/assets/images/home-slideshow/causeway.jpg' | relative_url }}" alt="Causeway to South Padre Island">
+        <figcaption>Causeway to South Padre</figcaption>
+      </figure>
+      <figure class="slide" data-slide>
+        <img src="{{ '/assets/images/home-slideshow/boardwalk.jpg' | relative_url }}" alt="Boardwalk at South Padre Island Birding Center">
+        <figcaption>South Padre Boardwalk</figcaption>
+      </figure>
+    </div>
+
+    <button class="slide-control prev" type="button" aria-label="Previous slide" data-slide-prev>Previous</button>
+    <button class="slide-control next" type="button" aria-label="Next slide" data-slide-next>Next</button>
+
+    <div class="slide-dots" data-slide-dots aria-label="Slide navigation"></div>
+  </div>
+
+  <p class="small">
+    Photos from Wikimedia Commons (open licenses):
+    <a href="https://commons.wikimedia.org/wiki/File:South_Padre_Island_Holiday_Inn.jpg" target="_blank" rel="noopener noreferrer">Holiday Inn</a>,
+    <a href="https://commons.wikimedia.org/wiki/File:South_Padre_Island_Beach_(51092851998).jpg" target="_blank" rel="noopener noreferrer">Beach</a>,
+    <a href="https://commons.wikimedia.org/wiki/File:Sunset_on_South_Padre_Island,_Texas_October_12,_2022_4.jpg" target="_blank" rel="noopener noreferrer">Sunset</a>,
+    <a href="https://commons.wikimedia.org/wiki/File:Causeway_to_South_Padre_(51102491670).jpg" target="_blank" rel="noopener noreferrer">Causeway</a>,
+    <a href="https://commons.wikimedia.org/wiki/File:Boardwalk,_South_Padre_Island_Birding_Center.jpg" target="_blank" rel="noopener noreferrer">Boardwalk</a>.
+  </p>
+</section>
+
 ## 2026 Theme
 
 <div class="callout">
