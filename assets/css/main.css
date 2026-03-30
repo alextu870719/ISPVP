@@ -497,6 +497,62 @@ a:focus-visible {
   border-color: var(--accent);
 }
 
+.registration-flow {
+  margin-top: 1.5rem;
+}
+
+.registration-flow h2 {
+  margin-top: 0;
+}
+
+.form-grid {
+  display: grid;
+  gap: 0.9rem;
+  margin-bottom: 0.9rem;
+}
+
+.registration-flow label {
+  display: block;
+  font-weight: 600;
+  color: var(--primary-strong);
+  margin-bottom: 0.3rem;
+}
+
+.registration-flow input,
+.registration-flow select {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.65rem 0.7rem;
+  font: inherit;
+  color: var(--ink);
+  background: var(--surface);
+}
+
+.registration-flow input:focus-visible,
+.registration-flow select:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--accent) 65%, white 35%);
+  outline-offset: 1px;
+}
+
+.fee-preview {
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.65rem 0.7rem;
+  background: color-mix(in srgb, var(--paper) 92%, white 8%);
+  font-weight: 700;
+  color: var(--primary-strong);
+}
+
+.status-panel {
+  margin-top: 1.5rem;
+}
+
+.status-panel ul {
+  margin-top: 0.5rem;
+}
+
 .callout {
   border-left: 4px solid var(--accent);
   padding: 0.75rem 1rem;
@@ -745,6 +801,10 @@ summary {
 
   .slide img {
     height: 420px;
+  }
+
+  .form-grid.two-col {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .footer-grid {

@@ -1,0 +1,23 @@
+---
+title: Payment Success
+hero_kicker: Registration
+hero_title: Payment Received
+hero_text: Thank you. Your payment has been received and is being verified.
+---
+
+<div class="card status-panel">
+  <h2>What Happens Next</h2>
+  <ul>
+    <li>Our system confirms your payment status from Stripe webhook events.</li>
+    <li>After payment confirmation, an email is sent automatically with your abstract submission link.</li>
+    <li>If you do not receive the email within 10 minutes, contact <a href="mailto:registration@ispvp.org">registration@ispvp.org</a>.</li>
+  </ul>
+</div>
+
+<div class="callout">
+  Keep this page for reference. Your abstract link is distributed by email only after paid-status verification.
+</div>
+
+<p>
+  <a class="button secondary" href="{{ '/abstracts/' | relative_url }}">View Abstract Instructions</a>
+</p>

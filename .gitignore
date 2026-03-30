@@ -6,3 +6,8 @@ _site/
 vendor/bundle/
 .DS_Store
 meeting-notes.txt
+
+# Backend environment secrets
+payments-api/.env
+payments-api/.env.*
+!payments-api/.env.example

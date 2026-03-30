@@ -2,7 +2,7 @@
 title: Registration
 hero_kicker: Attendance
 hero_title: Registration Pathways And Fee Schedule
-hero_text: ISPVP registration workflow is designed for static-hosted reliability using an external registration platform.
+hero_text: Complete registration and payment below. After successful payment, the abstract submission link is sent automatically by email.
 ---
 
 ## Registration Windows
@@ -27,12 +27,85 @@ hero_text: ISPVP registration workflow is designed for static-hosted reliability
 </div>
 
 <div class="callout">
-  Registration will be handled via an external platform suitable for GitHub Pages static hosting.
+  Payment is verified through Stripe Checkout. The abstract submission link is emailed only after confirmed payment.
 </div>
 
-<p>
-  <a class="button primary" href="https://www.eventbrite.com/" target="_blank" rel="noopener">Open Registration Platform (placeholder)</a>
-</p>
+<section class="card registration-flow" aria-label="Automated registration and payment">
+  <h2>Automated Registration And Payment</h2>
+  <p class="small">
+    Submit your details, select a ticket type, and continue to secure Stripe Checkout.
+  </p>
+
+  <form id="registration-payment-form" data-checkout-form>
+    <div class="form-grid two-col">
+      <div>
+        <label for="fullName">Full Name</label>
+        <input id="fullName" name="fullName" type="text" required>
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+      </div>
+    </div>
+
+    <div class="form-grid two-col">
+      <div>
+        <label for="affiliation">Affiliation / Institution</label>
+        <input id="affiliation" name="affiliation" type="text" required>
+      </div>
+      <div>
+        <label for="ticketType">Ticket Type</label>
+        <select id="ticketType" name="ticketType" required>
+          <option value="regular">Regular</option>
+          <option value="research">Research Staff</option>
+          <option value="student">Student</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-grid two-col">
+      <div>
+        <label for="pricingWindow">Pricing Window</label>
+        <select id="pricingWindow" name="pricingWindow" required>
+          <option value="early">Early Bird</option>
+          <option value="general">General</option>
+          <option value="late">Late</option>
+        </select>
+      </div>
+      <div>
+        <label>Selected Fee</label>
+        <p id="selected-fee" class="fee-preview">USD 450</p>
+      </div>
+    </div>
+
+    <button class="button primary" type="submit" data-submit-button>
+      Continue To Secure Checkout
+    </button>
+    <p class="small" id="checkout-message" aria-live="polite"></p>
+  </form>
+</section>
+
+## Optional Additional Details Form
+
+If you want to collect extra organizer fields before payment, embed a Google Form below and keep payment as the source-of-truth step.
+
+<iframe
+  title="Optional pre-registration Google Form"
+  width="100%"
+  height="620"
+  src="https://docs.google.com/forms/d/e/YOUR_REGISTRATION_FORM_ID/viewform?embedded=true"
+  frameborder="0"
+  marginheight="0"
+  marginwidth="0"
+  loading="lazy"
+  style="border: none; max-width: 100%;">
+</iframe>
+
+## Integration Notes
+
+- Set your backend API base URL in `window.ISPVP_CONFIG.CHECKOUT_API_BASE` inside `assets/js/main.js`.
+- Configure Stripe price IDs for each ticket type and pricing window in the backend env vars.
+- Do not place Stripe secret keys in this repository.
 
 ## 2026 Venue Window
 

@@ -1,0 +1,100 @@
+import Stripe from 'stripe';
+import crypto from 'crypto';
+
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+
+const PRICE_MAP = {
+  early: {
+    regular: process.env.STRIPE_PRICE_EARLY_REGULAR,
+    research: process.env.STRIPE_PRICE_EARLY_RESEARCH,
+    student: process.env.STRIPE_PRICE_EARLY_STUDENT
+  },
+  general: {
+    regular: process.env.STRIPE_PRICE_GENERAL_REGULAR,
+    research: process.env.STRIPE_PRICE_GENERAL_RESEARCH,
+    student: process.env.STRIPE_PRICE_GENERAL_STUDENT
+  },
+  late: {
+    regular: process.env.STRIPE_PRICE_LATE_REGULAR,
+    research: process.env.STRIPE_PRICE_LATE_RESEARCH,
+    student: process.env.STRIPE_PRICE_LATE_STUDENT
+  }
+};
+
+function sendJson(res, status, payload) {
+  res.statusCode = status;
+  res.setHeader('Content-Type', 'application/json');
+  res.end(JSON.stringify(payload));
+}
+
+function addCors(req, res) {
+  const allowed = process.env.ALLOWED_ORIGIN || '';
+  const origin = req.headers.origin || '';
+  if (allowed && origin === allowed) {
+    res.setHeader('Access-Control-Allow-Origin', origin);
+  }
+  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+}
+
+function getPriceId(pricingWindow, ticketType) {
+  return PRICE_MAP[pricingWindow]?.[ticketType] || '';
+}
+
+export default async function handler(req, res) {
+  addCors(req, res);
+
+  if (req.method === 'OPTIONS') {
+    res.statusCode = 204;
+    res.end();
+    return;
+  }
+
+  if (req.method !== 'POST') {
+    sendJson(res, 405, { error: 'Method not allowed' });
+    return;
+  }
+
+  try {
+    const { name, email, affiliation, ticketType, pricingWindow } = req.body || {};
+
+    if (!name || !email || !affiliation || !ticketType || !pricingWindow) {
+      sendJson(res, 400, { error: 'Missing required fields.' });
+      return;
+    }
+
+    const priceId = getPriceId(pricingWindow, ticketType);
+    if (!priceId) {
+      sendJson(res, 400, { error: 'No configured Stripe price for this selection.' });
+      return;
+    }
+
+    const abstractToken = crypto.randomBytes(16).toString('hex');
+
+    const session = await stripe.checkout.sessions.create({
+      mode: 'payment',
+      payment_method_types: ['card'],
+      customer_email: email,
+      line_items: [
+        {
+          price: priceId,
+          quantity: 1
+        }
+      ],
+      success_url: `${process.env.FRONTEND_URL}/payment-success/?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${process.env.FRONTEND_URL}/payment-cancelled/`,
+      metadata: {
+        name,
+        email,
+        affiliation,
+        ticketType,
+        pricingWindow,
+        abstractToken
+      }
+    });
+
+    sendJson(res, 200, { url: session.url });
+  } catch (error) {
+    sendJson(res, 500, { error: error.message || 'Unable to create checkout session.' });
+  }
+}

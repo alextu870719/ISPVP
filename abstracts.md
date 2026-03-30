@@ -2,7 +2,7 @@
 title: Abstract Submission
 hero_kicker: Call For Papers
 hero_title: Abstract Guidelines And Submission Workflow
-hero_text: Submit original research for oral or poster consideration aligned with the ISPVP scientific sessions.
+hero_text: Abstract submission is available to paid participants via a secure link emailed after payment confirmation.
 ---
 
 ## Abstract Requirements
@@ -13,17 +13,29 @@ hero_text: Submit original research for oral or poster consideration aligned wit
 - Select the most relevant program session.
 - Include corresponding author email and affiliation.
 
-## Abstract Submission Form
+## Paid-Only Submission
 
-<iframe width="100%" height="600" src="https://forms.office.com/Pages/ResponsePage.aspx?id=YOUR_FORM_ID" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width: 100%;">
+Use the abstract link from your payment confirmation email. The link includes your token and is validated against paid registration records.
+
+<iframe
+  title="ISPVP abstract submission"
+  width="100%"
+  height="680"
+  src="https://docs.google.com/forms/d/e/YOUR_ABSTRACT_FORM_ID/viewform?embedded=true"
+  frameborder="0"
+  marginwidth="0"
+  marginheight="0"
+  loading="lazy"
+  style="border: none; max-width: 100%;">
 </iframe>
 
 <div class="callout">
-  <strong>Setup Instructions:</strong> This form uses Microsoft Forms. To enable it:
+  <strong>Setup Instructions:</strong> This flow uses Google Forms + Google Apps Script. To enable it:
   <ol>
-    <li>Create a new form in <a href="https://forms.office.com" target="_blank">Microsoft Forms</a></li>
+    <li>Create a new form in <a href="https://forms.google.com" target="_blank" rel="noopener">Google Forms</a></li>
     <li>Add these fields:
       <ul>
+        <li>Paid Token (Short text, required)</li>
         <li>Full Name (Text)</li>
         <li>Email Address (Email)</li>
         <li>Affiliation/Institution (Text)</li>
@@ -33,8 +45,9 @@ hero_text: Submit original research for oral or poster consideration aligned wit
         <li>Preferred Session (Choice: Diagnostics / Emerging Tech / Pathogen Biology / Insect Biology / Plant Biology / Genetics & Breeding / Integrated Management)</li>
       </ul>
     </li>
-    <li>Get the form's embed URL and replace <code>YOUR_FORM_ID</code> above with the actual ID from your form's share/embed settings</li>
-    <li>Configure responses to be emailed to program@ispvp.org</li>
+    <li>Get the form embed URL and replace <code>YOUR_ABSTRACT_FORM_ID</code> above with your actual ID</li>
+    <li>Set up the Apps Script validator to reject invalid or unpaid tokens</li>
+    <li>Route accepted submissions to program@ispvp.org and your conference ledger sheet</li>
   </ol>
 </div>
 
