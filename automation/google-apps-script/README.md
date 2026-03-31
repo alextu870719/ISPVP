@@ -15,6 +15,11 @@ This script receives paid-registration events from Stripe webhook processing, up
 
 ## 2. Configure Google Form Token Field
 
+Configure two abstract form URLs in `Code.gs`:
+
+- `ABSTRACT_FORM_BASE_URL_EARLY_GENERAL`
+- `ABSTRACT_FORM_BASE_URL_LATE`
+
 1. In Google Forms, add required short-text field: `Paid Token`.
 2. Get prefilled link.
 3. Extract the entry key (for example `entry.1234567890`).

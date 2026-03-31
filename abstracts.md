@@ -17,11 +17,27 @@ hero_text: Abstract submission is available to paid participants via a secure li
 
 Use the abstract link from your payment confirmation email. The link includes your token and is validated against paid registration records.
 
+### Early Bird And General Registration
+
 <iframe
-  title="ISPVP abstract submission"
+  title="ISPVP abstract submission early and general"
   width="100%"
   height="680"
-  src="https://docs.google.com/forms/d/e/YOUR_ABSTRACT_FORM_ID/viewform?embedded=true"
+  src="https://docs.google.com/forms/d/e/1FAIpQLSfF36B7vCK3crMuTEpiGzNIyT-hhYLubie7l33VNblfQe1RAw/viewform?embedded=true"
+  frameborder="0"
+  marginwidth="0"
+  marginheight="0"
+  loading="lazy"
+  style="border: none; max-width: 100%;">
+</iframe>
+
+### Late Registration (Poster Abstracts Only)
+
+<iframe
+  title="ISPVP abstract submission late registration"
+  width="100%"
+  height="680"
+  src="https://docs.google.com/forms/d/e/1FAIpQLSfxtbR5NR7yzJILlS6SsYg_pQvK2Quipu8bPeM_wLN_2u7FKQ/viewform?embedded=true"
   frameborder="0"
   marginwidth="0"
   marginheight="0"
@@ -45,7 +61,7 @@ Use the abstract link from your payment confirmation email. The link includes yo
         <li>Preferred Session (Choice: Diagnostics / Emerging Tech / Pathogen Biology / Insect Biology / Plant Biology / Genetics & Breeding / Integrated Management)</li>
       </ul>
     </li>
-    <li>Get the form embed URL and replace <code>YOUR_ABSTRACT_FORM_ID</code> above with your actual ID</li>
+    <li>Use separate form IDs for early/general and late windows</li>
     <li>Set up the Apps Script validator to reject invalid or unpaid tokens</li>
     <li>Route accepted submissions to program@ispvp.org and your conference ledger sheet</li>
   </ol>

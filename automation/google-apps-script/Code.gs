@@ -1,8 +1,9 @@
 const CONFIG = {
-  SHEET_ID: 'YOUR_GOOGLE_SHEET_ID',
+  SHEET_ID: '1KAF40YJS1vtn--OCOpJS0S0Ed9WqqK1kCasusSEgX_M',
   SHEET_NAME: 'registrations',
-  SHARED_SECRET: 'same_value_as_APPS_SCRIPT_SHARED_SECRET',
-  ABSTRACT_FORM_BASE_URL: 'https://docs.google.com/forms/d/e/YOUR_ABSTRACT_FORM_ID/viewform',
+  SHARED_SECRET: '3ZbZl5b5Endgr6KmFDQ9LF2Bb+osFpBqX2TOhc1CsUzcPDil88tlQQY7YZJmSYJD',
+  ABSTRACT_FORM_BASE_URL_EARLY_GENERAL: 'https://docs.google.com/forms/d/e/1FAIpQLSfF36B7vCK3crMuTEpiGzNIyT-hhYLubie7l33VNblfQe1RAw/viewform',
+  ABSTRACT_FORM_BASE_URL_LATE: 'https://docs.google.com/forms/d/e/1FAIpQLSfxtbR5NR7yzJILlS6SsYg_pQvK2Quipu8bPeM_wLN_2u7FKQ/viewform',
   ABSTRACT_TOKEN_ENTRY_ID: 'entry.1234567890',
   PROGRAM_EMAIL: 'program@ispvp.org'
 };
@@ -76,7 +77,7 @@ function doPost(e) {
     // Send email only once.
     const emailSentAt = sheet.getRange(targetRow, 14).getValue();
     if (!emailSentAt && payload.email) {
-      const abstractLink = buildAbstractLink_(payload.abstractToken || '');
+      const abstractLink = buildAbstractLink_(payload.abstractToken || '', payload.pricingWindow || '');
       const subject = 'ISPVP payment confirmed: abstract submission link';
       const body = [
         `Dear ${payload.name || 'Participant'},`,
@@ -103,6 +104,14 @@ function doPost(e) {
   } catch (error) {
     return jsonResponse({ ok: false, error: String(error) });
   }
+}
+
+function doGet() {
+  return jsonResponse({
+    ok: true,
+    service: 'ispvp-automation-webhook',
+    message: 'Web app is deployed. Send POST requests to this endpoint for webhook processing.'
+  });
 }
 
 function validateAbstractToken(token) {
@@ -143,13 +152,24 @@ function markTokenUsed(token) {
   return { ok: true };
 }
 
-function buildAbstractLink_(token) {
+function buildAbstractLink_(token, pricingWindow) {
+  const baseUrl = getAbstractFormBaseUrl_(pricingWindow);
+
   if (!token || !CONFIG.ABSTRACT_TOKEN_ENTRY_ID) {
-    return CONFIG.ABSTRACT_FORM_BASE_URL;
+    return baseUrl;
   }
 
   const query = `${CONFIG.ABSTRACT_TOKEN_ENTRY_ID}=${encodeURIComponent(token)}`;
-  return `${CONFIG.ABSTRACT_FORM_BASE_URL}?usp=pp_url&${query}`;
+  return `${baseUrl}?usp=pp_url&${query}`;
+}
+
+function getAbstractFormBaseUrl_(pricingWindow) {
+  const windowValue = String(pricingWindow || '').toLowerCase();
+  if (windowValue === 'late') {
+    return CONFIG.ABSTRACT_FORM_BASE_URL_LATE;
+  }
+
+  return CONFIG.ABSTRACT_FORM_BASE_URL_EARLY_GENERAL;
 }
 
 function getSheet_() {
