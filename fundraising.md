@@ -14,12 +14,23 @@ hero_text: Support ISPVP student travel awards and scientific outreach through s
   <form id="fundraising-form" data-donation-form>
     <div class="form-grid two-col">
       <div>
-        <label for="donorName">Full Name</label>
-        <input id="donorName" name="donorName" type="text" required>
+        <label for="donorFirstName">First Name</label>
+        <input id="donorFirstName" name="donorFirstName" type="text" placeholder="Jane" required>
       </div>
       <div>
+        <label for="donorLastName">Last Name</label>
+        <input id="donorLastName" name="donorLastName" type="text" placeholder="Smith" required>
+      </div>
+    </div>
+
+    <div class="form-grid two-col">
+      <div>
         <label for="donorEmail">Email</label>
-        <input id="donorEmail" name="donorEmail" type="email" required>
+        <input id="donorEmail" name="donorEmail" type="email" placeholder="jane.smith@example.edu" required>
+      </div>
+      <div>
+        <label for="donorTitle">Official Title (Business Title)</label>
+        <input id="donorTitle" name="donorTitle" type="text" placeholder="Professor" required>
       </div>
     </div>
 

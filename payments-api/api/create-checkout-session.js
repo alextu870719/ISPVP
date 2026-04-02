@@ -88,6 +88,8 @@ export default async function handler(req, res) {
 
   try {
     const {
+      firstName,
+      lastName,
       name,
       email,
       affiliation,
@@ -98,8 +100,9 @@ export default async function handler(req, res) {
     } = req.body || {};
 
     const isDonation = checkoutType === 'donation';
+    const resolvedName = name || [firstName, lastName].filter(Boolean).join(' ').trim();
 
-    if (!name || !email) {
+    if (!resolvedName || !email) {
       sendJson(res, 400, { error: 'Missing required fields.' });
       return;
     }
@@ -134,13 +137,17 @@ export default async function handler(req, res) {
 
     const abstractToken = isDonation ? '' : crypto.randomBytes(16).toString('hex');
     const successPath = isDonation ? '/payment-success-donation/' : '/payment-success/';
+    const receiptDescription = isDonation
+      ? `${resolvedName} | International Symposium for Plant Vascular Pathosystems (ISPVP 2026) Fundraising Support | October 20-23, 2026 | South Padre Island, Texas`
+      : `${resolvedName} | International Symposium for Plant Vascular Pathosystems (ISPVP 2026) Registration | October 20-23, 2026 | South Padre Island, Texas | ${businessTitle || ''}`.trim();
 
     const session = await stripe.checkout.sessions.create({
       mode: 'payment',
       payment_method_types: ['card'],
       customer_email: email,
       payment_intent_data: {
-        receipt_email: email
+        receipt_email: email,
+        description: receiptDescription
       },
       line_items: [
         {
@@ -152,7 +159,9 @@ export default async function handler(req, res) {
       cancel_url: `${process.env.FRONTEND_URL}/payment-cancelled/`,
       metadata: {
         checkoutType: isDonation ? 'donation' : 'registration',
-        name,
+        firstName: firstName || '',
+        lastName: lastName || '',
+        name: resolvedName,
         email,
         affiliation: affiliation || '',
         businessTitle: businessTitle || '',

@@ -209,9 +209,15 @@ if (registrationForm || donationForm) {
     registrationForm.addEventListener('submit', async (event) => {
       event.preventDefault();
 
+      const firstName = document.getElementById('firstName')?.value?.trim() || '';
+      const lastName = document.getElementById('lastName')?.value?.trim() || '';
+      const fullName = [firstName, lastName].filter(Boolean).join(' ').trim();
+
       const payload = {
         checkoutType: 'registration',
-        name: document.getElementById('fullName')?.value?.trim() || '',
+        firstName,
+        lastName,
+        name: fullName,
         email: document.getElementById('email')?.value?.trim() || '',
         affiliation: document.getElementById('affiliation')?.value?.trim() || '',
         businessTitle: document.getElementById('businessTitle')?.value?.trim() || '',
@@ -244,16 +250,23 @@ if (registrationForm || donationForm) {
     donationForm.addEventListener('submit', async (event) => {
       event.preventDefault();
 
+      const firstName = document.getElementById('donorFirstName')?.value?.trim() || '';
+      const lastName = document.getElementById('donorLastName')?.value?.trim() || '';
+      const fullName = [firstName, lastName].filter(Boolean).join(' ').trim();
+
       const payload = {
         checkoutType: 'donation',
-        name: document.getElementById('donorName')?.value?.trim() || '',
+        firstName,
+        lastName,
+        name: fullName,
         email: document.getElementById('donorEmail')?.value?.trim() || '',
-        affiliation: document.getElementById('donorAffiliation')?.value?.trim() || 'ISPVP Supporter'
+        affiliation: document.getElementById('donorAffiliation')?.value?.trim() || 'ISPVP Supporter',
+        businessTitle: document.getElementById('donorTitle')?.value?.trim() || ''
       };
 
-      if (!payload.name || !payload.email) {
+      if (!payload.name || !payload.email || !payload.businessTitle) {
         if (donationMessage) {
-          donationMessage.textContent = 'Please enter name and email.';
+          donationMessage.textContent = 'Please enter first name, last name, email, and title.';
         }
         return;
       }

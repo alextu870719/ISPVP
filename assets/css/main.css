@@ -535,6 +535,10 @@ a:focus-visible {
   outline-offset: 1px;
 }
 
+.registration-flow input::placeholder {
+  color: #a8a2a0;
+}
+
 .fee-preview {
   margin: 0;
   border: 1px solid var(--line);

@@ -107,6 +107,8 @@ export default async function handler(req, res) {
           email: session.metadata?.email || session.customer_email || '',
           affiliation: session.metadata?.affiliation || '',
           businessTitle: session.metadata?.businessTitle || '',
+          firstName: session.metadata?.firstName || '',
+          lastName: session.metadata?.lastName || '',
           ticketType: session.metadata?.ticketType || '',
           pricingWindow: session.metadata?.pricingWindow || '',
           abstractToken: session.metadata?.abstractToken || ''
