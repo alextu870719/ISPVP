@@ -105,34 +105,52 @@ title: ISPVP 2026
 
 ## Pathosystem Image Highlights
 
-<section class="photo-gallery" aria-label="Open-license plant vascular pathosystem images">
-  <figure class="photo-card">
-    <a href="https://commons.wikimedia.org/wiki/File:OleanderLeafScorch.jpg" target="_blank" rel="noopener noreferrer">
-      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/OleanderLeafScorch.jpg" alt="Oleander infected with Xylella fastidiosa showing leaf scorch symptoms">
-    </a>
-    <figcaption>Oleander leaf scorch associated with <em>Xylella fastidiosa</em>.</figcaption>
-  </figure>
+<section class="container venue-showcase" aria-label="Lab disease photo slideshow">
+  <div class="slideshow" data-slideshow>
+    <div class="slides" data-slides>
+      <figure class="slide is-active" data-slide>
+        <img class="slide-contain" src="{{ '/disease_image/Citrus greening_HLB affected leaves.JPG' | relative_url | uri_escape }}" alt="Citrus greening affected leaves">
+        <figcaption>Citrus greening affected leaves</figcaption>
+      </figure>
+      <figure class="slide" data-slide>
+        <img class="slide-contain" src="{{ '/disease_image/HLB affected grapefruit.JPEG' | relative_url | uri_escape }}" alt="HLB affected grapefruit">
+        <figcaption>HLB affected grapefruit</figcaption>
+      </figure>
+      <figure class="slide" data-slide>
+        <img class="slide-contain" src="{{ '/disease_image/Healthy (left) and HLB affected(right) Grapefruit.JPEG' | relative_url | uri_escape }}" alt="Healthy and HLB affected grapefruit comparison">
+        <figcaption>Healthy vs HLB affected grapefruit</figcaption>
+      </figure>
+      <figure class="slide" data-slide>
+        <img class="slide-contain" src="{{ '/disease_image/Healthy (left) and HLB affected(right) Orange.JPEG' | relative_url | uri_escape }}" alt="Healthy and HLB affected orange comparison">
+        <figcaption>Healthy vs HLB affected orange</figcaption>
+      </figure>
+      <figure class="slide" data-slide>
+        <img class="slide-contain" src="{{ '/disease_image/Healthy (left) and citrus greening affected (right) oranges (Image Credit- Kranthi Mandadi, Texas A&M AgriLife).JPEG' | relative_url | uri_escape }}" alt="Healthy and citrus greening affected oranges">
+        <figcaption>Healthy vs citrus greening affected oranges</figcaption>
+      </figure>
+      <figure class="slide" data-slide>
+        <img class="slide-contain" src="{{ '/disease_image/Lopsided orange affected by citrus greening disease.JPG' | relative_url | uri_escape }}" alt="Lopsided orange affected by citrus greening disease">
+        <figcaption>Lopsided orange affected by citrus greening disease</figcaption>
+      </figure>
+      <figure class="slide" data-slide>
+        <img class="slide-contain" src="{{ '/disease_image/Potato zebrachip affected tuber.JPG' | relative_url | uri_escape }}" alt="Potato tuber affected by zebra chip disease">
+        <figcaption>Potato tuber affected by zebra chip disease</figcaption>
+      </figure>
+      <figure class="slide" data-slide>
+        <img class="slide-contain" src="{{ '/disease_image/Mandadi lab-zebra chip affected potato chips.jpg' | relative_url | uri_escape }}" alt="Potato chips affected by zebra chip disease">
+        <figcaption>Zebra chip affected potato chips</figcaption>
+      </figure>
+    </div>
 
-  <figure class="photo-card">
-    <a href="https://commons.wikimedia.org/wiki/File:Olivenhain_mit_Xylella_fastidiosa_bei_Surano_LE_190710.jpg" target="_blank" rel="noopener noreferrer">
-      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Olivenhain_mit_Xylella_fastidiosa_bei_Surano_LE_190710.jpg" alt="Olive grove in Puglia with trees affected by Xylella fastidiosa">
-    </a>
-    <figcaption>Olive quick decline context in Apulia linked to <em>Xylella fastidiosa</em>.</figcaption>
-  </figure>
+    <button class="slide-control prev" type="button" aria-label="Previous slide" data-slide-prev>Previous</button>
+    <button class="slide-control next" type="button" aria-label="Next slide" data-slide-next>Next</button>
 
-  <figure class="photo-card">
-    <a href="https://commons.wikimedia.org/wiki/File:Citrus_psyllid,_adult,_side,_recently_emerged,_Ft._Detrick_2014-05-01-09.08.52_ZS_PMax_(15420994972).jpg" target="_blank" rel="noopener noreferrer">
-      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Citrus_psyllid,_adult,_side,_recently_emerged,_Ft._Detrick_2014-05-01-09.08.52_ZS_PMax_(15420994972).jpg" alt="Adult Asian citrus psyllid, a major vector in the citrus Huanglongbing pathosystem">
-    </a>
-    <figcaption>Asian citrus psyllid (<em>Diaphorina citri</em>), a key HLB vector.</figcaption>
-  </figure>
+    <div class="slide-dots" data-slide-dots aria-label="Slide navigation"></div>
+  </div>
 </section>
 
 <p class="small">
-  Open-license images from Wikimedia Commons:
-  <a href="https://commons.wikimedia.org/wiki/File:OleanderLeafScorch.jpg" target="_blank" rel="noopener noreferrer">Oleander leaf scorch</a>,
-  <a href="https://commons.wikimedia.org/wiki/File:Olivenhain_mit_Xylella_fastidiosa_bei_Surano_LE_190710.jpg" target="_blank" rel="noopener noreferrer">Olive grove and Xylella fastidiosa</a>,
-  <a href="https://commons.wikimedia.org/wiki/File:Citrus_psyllid,_adult,_side,_recently_emerged,_Ft._Detrick_2014-05-01-09.08.52_ZS_PMax_(15420994972).jpg" target="_blank" rel="noopener noreferrer">Asian citrus psyllid</a>.
+  Laboratory disease images provided by the ISPVP team for pathosystem highlight use.
 </p>
 
 ## 2023 Meeting Photo Gallery
