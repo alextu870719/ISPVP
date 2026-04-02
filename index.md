@@ -149,7 +149,7 @@ title: ISPVP 2026
         <figcaption>Leadership Group</figcaption>
       </figure>
       <figure class="slide" data-slide>
-        <img src="{{ '/assets/images/gallery/ischpp-2022/IMG_2733.jpg' | relative_url }}" alt="ISCHPP 2023 conference activity">
+        <img class="slide-contain" src="{{ '/assets/images/gallery/ischpp-2022/IMG_2733.jpg' | relative_url }}" alt="ISCHPP 2023 conference activity">
         <figcaption>Conference Moments</figcaption>
       </figure>
       <figure class="slide" data-slide>
