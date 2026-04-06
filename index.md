@@ -109,36 +109,60 @@ title: ISPVP 2026
   <div class="slideshow" data-slideshow>
     <div class="slides" data-slides>
       <figure class="slide is-active" data-slide>
-        <img class="slide-contain" src="{{ '/disease_image/Citrus greening_HLB affected leaves.JPG' | relative_url | uri_escape }}" alt="Citrus greening affected leaves">
-        <figcaption>Citrus greening affected leaves</figcaption>
+        <img class="slide-contain" src="{{ '/Pathosystem Image Highlights/Common symptoms of phytoplasma infection observed in periwinkle (Catharanthus roseus) samples collected in Mayagüez, Puerto Rico. A. Infected (left) vs healthy (right) plant; B. Flower virescence; C. Phyllody; and D. Leaf mottling.webp' | relative_url | uri_escape }}" alt="Common symptoms of phytoplasma infection observed in periwinkle">
+        <figcaption>Common symptoms of phytoplasma infection observed in periwinkle. <span class="small">Reference: Chavez (2014).</span></figcaption>
       </figure>
       <figure class="slide" data-slide>
-        <img class="slide-contain" src="{{ '/disease_image/HLB affected grapefruit.JPEG' | relative_url | uri_escape }}" alt="HLB affected grapefruit">
-        <figcaption>HLB affected grapefruit</figcaption>
+        <img class="slide-contain" src="{{ '/Pathosystem Image Highlights/Electron microphotograph of Candidatus Phytoplasma asteris infecting the plant phloem. A section of phloem tissue from an infected plant vascular bundle is shown. Several of the plant cells contain phytoplasma cells.webp' | relative_url | uri_escape }}" alt="Electron microphotograph of Candidatus Phytoplasma asteris infecting the plant phloem">
+        <figcaption>Electron microphotograph of <em>Candidatus Phytoplasma asteris</em> infecting the plant phloem. <span class="small">Reference: Oshima, Maejima, &amp; Namba (2013).</span></figcaption>
       </figure>
       <figure class="slide" data-slide>
-        <img class="slide-contain" src="{{ '/disease_image/Healthy (left) and HLB affected(right) Grapefruit.JPEG' | relative_url | uri_escape }}" alt="Healthy and HLB affected grapefruit comparison">
-        <figcaption>Healthy vs HLB affected grapefruit</figcaption>
+        <img class="slide-contain" src="{{ "/Pathosystem Image Highlights/Unique symptoms caused by phytoplasma infection. a Phyllody symptoms on hydrangea induced by infection with 'Candidatus Phytoplasma japonicum' JHP phytoplasma (right). b Witches' broom symptoms on Ziziphus jujuba induced by infection with 'Ca. P.webp" | relative_url | uri_escape }}" alt="Unique symptoms caused by phytoplasma infection">
+        <figcaption>Unique symptoms caused by phytoplasma infection. <span class="small">Reference: Maejima, Oshima, &amp; Namba (2014).</span></figcaption>
       </figure>
       <figure class="slide" data-slide>
-        <img class="slide-contain" src="{{ '/disease_image/Healthy (left) and HLB affected(right) Orange.JPEG' | relative_url | uri_escape }}" alt="Healthy and HLB affected orange comparison">
-        <figcaption>Healthy vs HLB affected orange</figcaption>
+        <img class="slide-contain" src="{{ '/Pathosystem Image Highlights/Oncopsis alni (Schrank)- nymph (left) and adult (right) (Courtesy of G. Kunz).jpg' | relative_url | uri_escape }}" alt="Oncopsis alni nymph and adult">
+        <figcaption><em>Oncopsis alni</em> nymph and adult. <span class="small">Reference: Alma, Lessio, &amp; Nickel (2019).</span></figcaption>
       </figure>
       <figure class="slide" data-slide>
-        <img class="slide-contain" src="{{ '/disease_image/Healthy (left) and citrus greening affected (right) oranges (Image Credit- Kranthi Mandadi, Texas A&M AgriLife).JPEG' | relative_url | uri_escape }}" alt="Healthy and citrus greening affected oranges">
-        <figcaption>Healthy vs citrus greening affected oranges</figcaption>
+        <img class="slide-contain" src="{{ "/Pathosystem Image Highlights/Symptoms of Pierce's disease in grapevines caused by Xylella fastidiosa (courtesy A.C. Goheen; reproduced from Compendium of Grape Diseases, 1988, American Phytopathological Society, St. Paul, MN).jpg" | relative_url | uri_escape }}" alt="Symptoms of Pierce's disease in grapevines caused by Xylella fastidiosa">
+        <figcaption>Symptoms of Pierce's disease in grapevines caused by <em>Xylella fastidiosa</em>. <span class="small">Reference: Pierce's disease image credit in information.txt.</span></figcaption>
       </figure>
       <figure class="slide" data-slide>
-        <img class="slide-contain" src="{{ '/disease_image/Lopsided orange affected by citrus greening disease.JPG' | relative_url | uri_escape }}" alt="Lopsided orange affected by citrus greening disease">
-        <figcaption>Lopsided orange affected by citrus greening disease</figcaption>
+        <img class="slide-contain" src="{{ '/Pathosystem Image Highlights/The glassy-winged sharpshooter leafhopper vector of Xylella fasidiosa (courtesy B. Bextine, Fletcher and Wayadande, 2002, The Plant Health Instructor).jpg' | relative_url | uri_escape }}" alt="The glassy-winged sharpshooter leafhopper vector of Xylella fastidiosa">
+        <figcaption>The glassy-winged sharpshooter leafhopper vector of <em>Xylella fastidiosa</em>. <span class="small">Reference: vector image credit in information.txt.</span></figcaption>
       </figure>
       <figure class="slide" data-slide>
-        <img class="slide-contain" src="{{ '/disease_image/Potato zebrachip affected tuber.JPG' | relative_url | uri_escape }}" alt="Potato tuber affected by zebra chip disease">
-        <figcaption>Potato tuber affected by zebra chip disease</figcaption>
+        <img class="slide-contain" src="{{ '/Pathosystem Image Highlights/Adult Asian citrus psyllid, Diaphorina citri, (2-3 millimeters long) on a young citrus leaf.jpg' | relative_url | uri_escape }}" alt="Adult Asian citrus psyllid on a young citrus leaf">
+        <figcaption>Adult Asian citrus psyllid on a young citrus leaf. <span class="small">Reference: USDA ARS / David Hall.</span></figcaption>
       </figure>
       <figure class="slide" data-slide>
-        <img class="slide-contain" src="{{ '/disease_image/Mandadi lab-zebra chip affected potato chips.jpg' | relative_url | uri_escape }}" alt="Potato chips affected by zebra chip disease">
-        <figcaption>Zebra chip affected potato chips</figcaption>
+        <img class="slide-contain" src="{{ '/Pathosystem Image Highlights/Healthy (left) and HLB affected(right) Grapefruit.JPEG' | relative_url | uri_escape }}" alt="Healthy and HLB affected grapefruit comparison">
+        <figcaption>Healthy vs HLB affected grapefruit. <span class="small">Reference: image credit listed in information.txt.</span></figcaption>
+      </figure>
+      <figure class="slide" data-slide>
+        <img class="slide-contain" src="{{ '/Pathosystem Image Highlights/Potato zebrachip affected tuber.JPG' | relative_url | uri_escape }}" alt="Potato zebra chip affected tuber">
+        <figcaption>Potato zebra chip affected tuber. <span class="small">Reference: image credit listed in information.txt.</span></figcaption>
+      </figure>
+      <figure class="slide" data-slide>
+        <img class="slide-contain" src="{{ '/Pathosystem Image Highlights/A.Symptoms of potato brown rot (A) and tomato bacterial wilt (B) caused by R. solanacearum showing wilt of youngest leaves.jpg' | relative_url | uri_escape }}" alt="Symptoms of potato brown rot and tomato bacterial wilt caused by R. solanacearum">
+        <figcaption>Potato brown rot and tomato bacterial wilt symptoms caused by <em>R. solanacearum</em>. <span class="small">Reference: D. P. Weingartner / Clemson University / USDA Cooperative Extension Slide Series / Bugwood.org.</span></figcaption>
+      </figure>
+      <figure class="slide" data-slide>
+        <img class="slide-contain" src="{{ '/Pathosystem Image Highlights/B.Symptoms of potato brown rot (A) and tomato bacterial wilt (B) caused by R. solanacearum showing wilt of youngest leaves.jpg' | relative_url | uri_escape }}" alt="Additional potato brown rot and tomato bacterial wilt image">
+        <figcaption>Potato brown rot and tomato bacterial wilt symptoms. <span class="small">Reference: Clemson University / USDA Cooperative Extension Slide Series / Bugwood.org.</span></figcaption>
+      </figure>
+      <figure class="slide" data-slide>
+        <img class="slide-contain" src="{{ '/Pathosystem Image Highlights/Brown discoloration of stem tissues caused by R. solanacearum (photo courtesy of Clemson University, USDA Cooperative Extension Slide Series, Bugwood.org)..jpg' | relative_url | uri_escape }}" alt="Brown discoloration of stem tissues caused by R. solanacearum">
+        <figcaption>Brown discoloration of stem tissues caused by <em>R. solanacearum</em>. <span class="small">Reference: Clemson University / USDA Cooperative Extension Slide Series / Bugwood.org.</span></figcaption>
+      </figure>
+      <figure class="slide" data-slide>
+        <img class="slide-contain" src="{{ "/Pathosystem Image Highlights/Root-knot nematode (M. enterolobii) symptoms on ‘Rutgers’ tomato roots. Other species of root-knot nematode produce similar galling symptoms.jpeg" | relative_url | uri_escape }}" alt="Root-knot nematode symptoms on Rutgers tomato roots">
+        <figcaption>Root-knot nematode symptoms on tomato roots. <span class="small">Reference: T. Schwarz, NC State University.</span></figcaption>
+      </figure>
+      <figure class="slide" data-slide>
+        <img class="slide-contain" src="{{ '/Pathosystem Image Highlights/Field symptoms of Fusarium wilt expressed in cotton seedlings and mature cotton.webp' | relative_url | uri_escape }}" alt="Field symptoms of Fusarium wilt in cotton">
+        <figcaption>Field symptoms of Fusarium wilt in cotton. <span class="small">Reference: Le et al. (2022).</span></figcaption>
       </figure>
     </div>
 
@@ -150,7 +174,7 @@ title: ISPVP 2026
 </section>
 
 <p class="small">
-  Laboratory disease images provided by the ISPVP team for pathosystem highlight use.
+  Lab image library sourced from the Pathosystem Image Highlights folder and information.txt reference list.
 </p>
 
 ## 2023 Meeting Photo Gallery
