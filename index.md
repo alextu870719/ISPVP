@@ -109,7 +109,7 @@ title: ISPVP 2026
   <div class="slideshow" data-slideshow>
     <div class="slides" data-slides>
       <figure class="slide is-active" data-slide>
-        <img class="slide-contain" src="{{ '/Pathosystem Image Highlights/Common symptoms of phytoplasma infection observed in periwinkle (Catharanthus roseus) samples collected in Mayagüez, Puerto Rico. A. Infected (left) vs healthy (right) plant; B. Flower virescence; C. Phyllody; and D. Leaf mottling.webp' | relative_url | uri_escape }}" alt="Common symptoms of phytoplasma infection observed in periwinkle">
+        <img class="slide-contain" src="{{ '/Pathosystem Image Highlights/Common symptoms of phytoplasma infection observed in periwinkle (Catharanthus roseus) samples collected in Mayagüez, Puerto Rico. A. Infected (left) vs healthy (right) plant; B. Flower virescence; C. Phyllody; and D. Leaf mottling_.webp' | relative_url | uri_escape }}" alt="Common symptoms of phytoplasma infection observed in periwinkle">
         <figcaption>Common symptoms of phytoplasma infection observed in periwinkle. <span class="small">Reference: Chavez (2014).</span></figcaption>
       </figure>
       <figure class="slide" data-slide>
