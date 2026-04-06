@@ -138,11 +138,11 @@ title: ISPVP 2026
       </figure>
       <figure class="slide" data-slide>
         <img class="slide-contain" src="{{ '/Pathosystem Image Highlights/Healthy (left) and HLB affected(right) Grapefruit.JPEG' | relative_url | uri_escape }}" alt="Healthy and HLB affected grapefruit comparison">
-        <figcaption>Healthy vs HLB affected grapefruit. <span class="small">Reference: image credit listed in information.txt.</span></figcaption>
+        <figcaption>Healthy vs HLB affected grapefruit. <span class="small">Credit: Mandadi Lab.</span></figcaption>
       </figure>
       <figure class="slide" data-slide>
         <img class="slide-contain" src="{{ '/Pathosystem Image Highlights/Potato zebrachip affected tuber.JPG' | relative_url | uri_escape }}" alt="Potato zebra chip affected tuber">
-        <figcaption>Potato zebra chip affected tuber. <span class="small">Reference: image credit listed in information.txt.</span></figcaption>
+        <figcaption>Potato zebra chip affected tuber. <span class="small">Credit: Mandadi Lab.</span></figcaption>
       </figure>
       <figure class="slide" data-slide>
         <img class="slide-contain" src="{{ '/Pathosystem Image Highlights/A.Symptoms of potato brown rot (A) and tomato bacterial wilt (B) caused by R. solanacearum showing wilt of youngest leaves.jpg' | relative_url | uri_escape }}" alt="Symptoms of potato brown rot and tomato bacterial wilt caused by R. solanacearum">
