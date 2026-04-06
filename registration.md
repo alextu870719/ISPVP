@@ -27,13 +27,13 @@ hero_text: Complete registration and payment below. After successful payment, th
 </div>
 
 <article class="card" style="margin-top: 1rem;">
-  <h3>What Registration Includes</h3>
-  <ul>
-    <li>Access to all scientific sessions and plenary lectures.</li>
-    <li>Poster sessions, welcome reception, and conference dinner (banquet).</li>
+  <h3>What's Included:</h3>
+  <ol>
+    <li>Access to all scientific sessions (Talks and Posters).</li>
     <li>Program materials and digital abstract book.</li>
-    <li>Coffee breaks and designated lunches.</li>
-  </ul>
+    <li>Welcome reception, and conference dinner (banquet).</li>
+    <li>Breakfast, Lunch, and Coffee breaks during conference days.</li>
+  </ol>
 </article>
 
 <div class="callout">

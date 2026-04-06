@@ -7,7 +7,7 @@ hero_text: ISPVP convenes a research community focused on vascular pathogen syst
 
 ## Symposium Overview
 
-The International Symposium for Plant Vascular Pathosystems (ISPVP) is a peer-focused conference platform designed to accelerate scientific discovery and practical implementation for vascular disease challenges in plant systems.
+The International Symposium for Plant Vascular Pathosystems (ISPVP) is a peer-focused conference platform designed to accelerate scientific discovery and practical implementation for vascular disease challenges in cropping systems.
 
 The symposium inherits organizational strengths from previous congress models while broadening scope beyond single-crop pathosystems. ISPVP emphasizes method transfer, open scientific dialogue, and reproducible data standards.
 
@@ -26,8 +26,8 @@ The symposium inherits organizational strengths from previous congress models wh
     <p>Evidence-driven presentations, transparent methods, and clear interpretation standards.</p>
   </article>
   <article class="card">
-    <h3>Global Relevance</h3>
-    <p>Comparative insights from multiple host species, pathogen groups, and regional production systems.</p>
+    <h3>Stakeholder Relevance</h3>
+    <p>Comparative insights from multiple crop species, pathogen groups, and regional production systems.</p>
   </article>
   <article class="card">
     <h3>Translation</h3>

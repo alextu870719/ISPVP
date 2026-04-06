@@ -2,7 +2,7 @@
 title: Venue And Visa
 hero_kicker: On-Site Information
 hero_title: Conference Venue, Access, And Visitor Preparation
-hero_text: Venue details for the 3rd ISPVP and attendee preparation resources.
+hero_text: Venue details for the 3rd International Symposium for Plant Vascular Pathosystems (ISPVP) and attendee preparation resources.
 ---
 
 ## Venue Summary

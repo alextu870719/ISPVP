@@ -6,7 +6,7 @@ title: ISPVP 2026
   <div class="container hero-grid">
     <div>
       <p class="eyebrow">Next Congress</p>
-      <h2>3rd ISPVP | <span class="date">October 20–23, 2026</span> | South Padre Island, Texas</h2>
+      <h2>3rd International Symposium for Plant Vascular Pathosystems (ISPVP) | <span class="date">October 20–23, 2026</span> | South Padre Island, Texas</h2>
       <p class="lead">ISPVP convenes a research community focused on vascular pathogen systems,insect vectors and their ecological, molecular, and translational dimensions.</p>
       <div class="hero-cta">
         <a class="button primary" href="{{ '/registration/' | relative_url }}">Register Interest</a>
@@ -24,6 +24,12 @@ title: ISPVP 2026
     </aside>
   </div>
 </section>
+
+## 2026 Theme
+
+<div class="callout">
+  <strong>Confronting Endemic and Emerging Plant Vascular Pathogens, Insect Vectors, and Diseases Together.</strong>
+</div>
 
 <section class="container venue-showcase" aria-label="Venue and destination photo slideshow">
   <div class="venue-showcase-head">
@@ -80,12 +86,6 @@ title: ISPVP 2026
   </p>
 </section>
 
-## 2026 Theme
-
-<div class="callout">
-  Confronting Endemic and Emerging Plant Vascular Pathogens, Insect Vectors, and Diseases Together.
-</div>
-
 ## Scientific Scope
 
 <div class="grid three">
@@ -103,9 +103,9 @@ title: ISPVP 2026
   </article>
 </div>
 
-## Pathosystem Image Highlights
+## Pathosystem Photo Gallery
 
-<section class="container venue-showcase" aria-label="Lab disease photo slideshow">
+<section class="container venue-showcase" aria-label="Pathosystem photo gallery slideshow">
   <div class="slideshow" data-slideshow>
     <div class="slides" data-slides>
       <figure class="slide is-active" data-slide>
@@ -186,7 +186,7 @@ title: ISPVP 2026
 </section>
 
 <p class="small">
-  Lab image library sourced from the Pathosystem Image Highlights folder and information.txt reference list.
+  Pathosystem photo gallery sourced from the Pathosystem Image Highlights folder and information.txt reference list.
 </p>
 
 ## 2023 Meeting Photo Gallery
@@ -200,7 +200,7 @@ title: ISPVP 2026
       </figure>
       <figure class="slide" data-slide>
         <img src="{{ '/assets/images/gallery/ischpp-2022/lt_group.jpg' | relative_url }}" alt="ISCHPP 2023 leadership group photo">
-        <figcaption>Leadership Group</figcaption>
+        <figcaption>ISCHPP 2023 Group Photo-II</figcaption>
       </figure>
       <figure class="slide" data-slide>
         <img class="slide-contain" src="{{ '/assets/images/gallery/ischpp-2022/IMG_2733.jpg' | relative_url }}" alt="ISCHPP 2023 conference activity">
