@@ -292,6 +292,18 @@ a:focus-visible {
   border-bottom: 1px solid var(--line);
 }
 
+.hero-home {
+  background:
+    linear-gradient(120deg, rgba(245, 241, 232, 0.88), rgba(245, 241, 232, 0.66)),
+    url("../images/home-slideshow/causeway.jpg") center center / cover no-repeat;
+}
+
+.hero-home .hero-grid > div,
+.hero-home .panel {
+  background: color-mix(in srgb, var(--surface) 88%, transparent);
+  backdrop-filter: blur(4px);
+}
+
 .hero-grid {
   display: grid;
   gap: 1.4rem;
