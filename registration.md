@@ -26,15 +26,10 @@ hero_text: Registration link Pending (Texas A&M AgriLife Register).
   </table>
 </div>
 
-<p style="margin-top: 0.5rem; font-size: 0.9rem; color: #555;">
-  <strong>Regular:</strong> Associate Professor, Professor, Scientists, Specialists <br>
-  <strong>Research Staff:</strong> Early career professionals (Postdocs and Assistant Professors)
-</p>
-
-<p style="margin-top: 0.5rem; font-size: 0.9rem; color: #555;">
-  <strong>Regular:</strong> Associate Professor, Professor, Scientists, Specialists <br>
-  <strong>Research Staff:</strong> Early career professionals (Postdocs and Assistant Professors)
-</p>
+  <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #555;">
+    <strong>Regular:</strong> Assistant, Associate, Professor, and equivalent scientists <br>
+    <strong>Research Staff:</strong> Postdocs, technicians, and equivalent staff
+  </p>
 
 <article class="card" style="margin-top: 1rem;">
   <h3>What's Included:</h3>
