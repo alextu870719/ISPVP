@@ -2,7 +2,7 @@
 title: ISPVP 2026
 ---
 
-<section class="hero hero-home">
+<section class="hero">
   <div class="container hero-grid">
     <div>
       <p class="eyebrow">Next Congress</p>
