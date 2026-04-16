@@ -2,7 +2,7 @@
 title: Registration
 hero_kicker: Attendance
 hero_title: Registration Pathways And Fee Schedule
-hero_text: Registration link Pending (AgriLife Register).
+hero_text: Registration link Pending (Texas A&M AgriLife Register).
 ---
 
 ## Registration Windows
@@ -47,16 +47,16 @@ hero_text: Registration link Pending (AgriLife Register).
 </article>
 
 <div class="callout">
-  Registration link Pending (AgriLife Register).
+  Registration link Pending (Texas A&M AgriLife Register).
 </div>
 
 <section class="card" aria-label="Registration link pending">
   <h2>Registration Link Pending</h2>
   <p>
-    Registration link Pending (AgriLife Register).
+    Registration link Pending (Texas A&M AgriLife Register).
   </p>
   <p>
-    <a class="button primary" href="#" aria-disabled="true">Registration Link Pending (AgriLife Register)</a>
+    <a class="button primary" href="#" aria-disabled="true">Registration Link Pending (Texas A&M AgriLife Register)</a>
   </p>
 </section>
 

@@ -6,7 +6,7 @@ hero_text: Support ISPVP student travel awards and scientific outreach through s
 ---
 
 <div class="callout">
-  Registration link Pending (AgriLife Register).
+  Sponsorship link pending.
 </div>
 
 <section class="card registration-flow" aria-label="Sponsorship information">
