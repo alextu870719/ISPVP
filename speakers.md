@@ -5,13 +5,6 @@ hero_title: International Experts Across Pathosystems
 hero_text: Speaker invitations are being finalized through committee nomination and voting.
 ---
 
-## Speaker Selection Process (2026)
-
-- Each organizing committee member may recommend up to 10 speakers based on scientific contributions from the last 3 years.
-- The committee will vote to select 2-3 external invited speakers (30-minute talks).
-- Organizing committee members who submit abstracts may also be selected for invited or selected talk slots.
-- Invited speaker travel support may be provided.
-
 ## Invited Speaker Slots
 
 <div class="table-wrap">
