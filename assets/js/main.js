@@ -150,15 +150,11 @@ if (registrationForm || donationForm) {
       return new Date(Date.UTC(year, month - 1, day));
     }
 
-    function getActivePricingWindow() {
+        function getActivePricingWindow() {
       const now = new Date();
       const todayUtc = toUtcDate(now.getUTCFullYear(), now.getUTCMonth() + 1, now.getUTCDate());
 
-<<<<<<< HEAD
-      const earlyStart = toUtcDate(2026, 5, 15);
-=======
       const earlyStart = toUtcDate(2026, 5, 1);
->>>>>>> 0796c93 (Revert early-bird start date to May 1)
       const generalStart = toUtcDate(2026, 8, 2);
       const generalEnd = toUtcDate(2026, 8, 23);
       const lateStart = toUtcDate(2026, 8, 24);
@@ -168,11 +164,7 @@ if (registrationForm || donationForm) {
         return '';
       }
 
-<<<<<<< HEAD
-      // Early bird is available from May 15 until general registration opens.
-=======
       // Early bird is available from May 1 until general registration opens.
->>>>>>> 0796c93 (Revert early-bird start date to May 1)
       if (todayUtc < generalStart) {
         return 'early';
       }
