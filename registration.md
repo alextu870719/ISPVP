@@ -2,8 +2,18 @@
 title: Registration
 hero_kicker: Attendance
 hero_title: Registration Pathways And Fee Schedule
-hero_text: Please register through the Texas A&M AgriLife registration portal.
+hero_text: ""
 ---
+
+<section class="card" aria-label="Registration link">
+  <h2>Register Now</h2>
+  <p>
+    Please register through the Texas A&amp;M AgriLife registration portal.
+  </p>
+  <p>
+    <a class="button primary" href="https://agriliferegister.tamu.edu/wesl-ev-001" target="_blank" rel="noopener">Register (Texas A&amp;M AgriLife)</a>
+  </p>
+</section>
 
 ## Registration Windows
 
@@ -41,13 +51,11 @@ hero_text: Please register through the Texas A&M AgriLife registration portal.
   </ol>
 </article>
 
-<section class="card" aria-label="Registration link">
-  <h2>Register Now</h2>
+<section class="card docs" aria-label="Flyers">
+  <h3>Flyers</h3>
   <p>
-    Please register through the Texas A&amp;M AgriLife registration portal.
-  </p>
-  <p>
-    <a class="button primary" href="https://agriliferegister.tamu.edu/wesl-ev-001" target="_blank" rel="noopener">Register (Texas A&amp;M AgriLife)</a>
+    <a class="button secondary" href="{{ '/assets/docs/Register-ISPVP_Final_Flyers.pdf' | relative_url }}" target="_blank" rel="noopener">Registration Flyer (PDF)</a>
+    <a class="button" href="{{ '/assets/docs/Sponsor-ISPVP_Final_Flyers.pdf' | relative_url }}" target="_blank" rel="noopener">Sponsorship Flyer (PDF)</a>
   </p>
 </section>
 
